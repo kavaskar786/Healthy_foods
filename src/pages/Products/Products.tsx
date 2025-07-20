@@ -1,16 +1,16 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import ProductCard from "../../components/ProductCard";
-import CategoryFilter from "./CategoryFilter";
-import FeatureItem from "./FeatureItem";
-import { products, FEATURES } from "../../utils/constant";
+import FeatureItem from "../../components/FeatureItem";
+import { PRODUCTS, FEATURES } from "../../utils/constant";
+import CategoryFilter from "../../components/CategoryFilter";
 
 const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
   const filteredProducts = selectedCategory
-    ? products.filter((product) => product.category === selectedCategory)
-    : products;
+    ? PRODUCTS.filter((product) => product.category === selectedCategory)
+    : PRODUCTS;
 
   return (
     <motion.div
@@ -29,7 +29,7 @@ const Products = () => {
               Our Products
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover our range of healthy and delicious products, made with
+              Discover our range of healthy and delicious PRODUCTS, made with
               the finest ingredients to support your wellness journey.
             </p>
           </motion.div>
@@ -40,7 +40,7 @@ const Products = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <CategoryFilter
             categories={[
-              ...new Set(products.map((product) => product.category)),
+              ...new Set(PRODUCTS.map((product) => product.category)),
             ]}
             selectedCategory={selectedCategory}
             onCategoryChange={setSelectedCategory}

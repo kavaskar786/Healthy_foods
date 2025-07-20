@@ -20,12 +20,9 @@ export const Ingredient = ({
   const meshRef = useRef<Mesh>(null);
   const [hasLanded, setHasLanded] = useState(false);
   const velocity = useRef(0);
-  const gravity = -0.015; // Slightly reduced gravity for a softer fall
-
-  // Define the liquid properties
+  const gravity = -0.015;
   const liquidSurfaceY = 0.05;
-  const liquidDrag = 0.92; // Factor to slow down velocity in liquid
-
+  const liquidDrag = 0.92;
   useFrame(() => {
     if (meshRef.current && !hasLanded) {
       const currentPos = meshRef.current.position;

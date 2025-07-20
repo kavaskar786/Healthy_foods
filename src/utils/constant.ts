@@ -1,7 +1,9 @@
 import { AddOnOptionType } from "../components/ThreeDimensionalArea.types";
 import { Product } from "../pages/Products/ProductTypes";
 
-export const products: Product[] = [
+export const ProductTitle = "Healthy Foods";
+
+export const PRODUCTS: Product[] = [
   {
     id: 1,
     name: "Organic Oats",
@@ -134,3 +136,14 @@ export const ADD_ON_OPTIONS: AddOnOptionType[] = [
     icon: "🥥",
   },
 ];
+
+// Bowl constants
+export const BOWL_HEIGHT = 1.5;
+export const BOWL_OUTER_BOTTOM_RADIUS = 1.2;
+export const BOWL_OUTER_TOP_RADIUS = 2.2;
+export const BOWL_INNER_BOTTOM_RADIUS = 1.0;
+export const BOWL_INNER_TOP_RADIUS = 2.0;
+export const BOWL_RIM_RADIUS =
+  (BOWL_INNER_TOP_RADIUS + BOWL_OUTER_TOP_RADIUS) / 2;
+export const BOWL_RIM_TUBE_RADIUS =
+  (BOWL_OUTER_TOP_RADIUS - BOWL_INNER_TOP_RADIUS) / 2;

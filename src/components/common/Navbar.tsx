@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Menu, X, Leaf } from "lucide-react";
+import { ProductTitle } from "../../utils/constant";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +17,7 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navItems = [
+  const NAVBARITEMS = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Products", path: "/products" },
@@ -37,12 +38,12 @@ const Navbar = () => {
           <Link to="/" className="flex items-center space-x-2">
             <Leaf className="h-8 w-8 text-green-600" />
             <span className="text-2xl font-bold text-gray-800">
-              Health Food
+              {ProductTitle}
             </span>
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
+            {NAVBARITEMS.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
@@ -79,7 +80,7 @@ const Navbar = () => {
             className="md:hidden bg-white border-t border-gray-200"
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
-              {navItems.map((item) => (
+              {NAVBARITEMS.map((item) => (
                 <Link
                   key={item.name}
                   to={item.path}

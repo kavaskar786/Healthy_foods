@@ -6,7 +6,7 @@ import { AddOnOptionType, IngredientType } from "./ThreeDimensionalArea.types";
 import { Bowl3DScene } from "./Bowl3DScene";
 import { ADD_ON_OPTIONS } from "../utils/constant";
 
-export const Bowl3D = () => {
+export const ThreeDimensionalArea = () => {
   const [ingredients, setIngredients] = useState<IngredientType[]>([]);
 
   // ✨ UPDATED: addIngredient function

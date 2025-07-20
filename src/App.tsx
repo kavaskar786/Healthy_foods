@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/common/Navbar";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Products from "./pages/Products/Products";
 import Blog from "./pages/Blog/Blog";
-import Footer from "./components/Footer";
+import Footer from "./components/common/Footer";
 import Contact from "./pages/Contact/Contact";
 
 function App() {
