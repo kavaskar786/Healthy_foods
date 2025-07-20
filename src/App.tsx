@@ -1,13 +1,12 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import About from './pages/About';
-import Products from './pages/Products';
-import Contact from './pages/Contact';
-import Blog from './pages/Blog';
-import Footer from './components/Footer';
+import { Routes, Route } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home/Home";
+import About from "./pages/About/About";
+import Products from "./pages/Products/Products";
+import Blog from "./pages/Blog/Blog";
+import Footer from "./components/Footer";
+import Contact from "./pages/Contact/Contact";
 
 function App() {
   return (

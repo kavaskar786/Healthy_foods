@@ -1,77 +1,98 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Calendar, User, Clock, ArrowRight } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { Calendar, User, Clock, ArrowRight } from "lucide-react";
 
 const Blog = () => {
   const blogPosts = [
     {
       id: 1,
-      title: "The Science Behind Overnight Oats: Why They're Perfect for Breakfast",
-      excerpt: "Discover the nutritional benefits of overnight oats and how they can transform your morning routine with sustained energy and improved digestion.",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg",
+      title:
+        "The Science Behind Overnight Oats: Why They're Perfect for Breakfast",
+      excerpt:
+        "Discover the nutritional benefits of overnight oats and how they can transform your morning routine with sustained energy and improved digestion.",
+      image:
+        "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg",
       author: "Dr. Sarah Chen",
       date: "January 15, 2025",
       readTime: "5 min read",
-      category: "Nutrition"
+      category: "Nutrition",
     },
     {
       id: 2,
       title: "10 Superfoods to Boost Your Immune System Naturally",
-      excerpt: "Learn about powerful ingredients that can strengthen your immune system and keep you healthy throughout the year.",
-      image: "https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg",
+      excerpt:
+        "Learn about powerful ingredients that can strengthen your immune system and keep you healthy throughout the year.",
+      image:
+        "https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg",
       author: "Marcus Johnson",
       date: "January 12, 2025",
       readTime: "7 min read",
-      category: "Health Tips"
+      category: "Health Tips",
     },
     {
       id: 3,
       title: "Sustainable Eating: How Your Food Choices Impact the Planet",
-      excerpt: "Explore the connection between sustainable agriculture and healthy eating, and how you can make environmentally conscious food choices.",
-      image: "https://images.pexels.com/photos/1327838/pexels-photo-1327838.jpeg",
+      excerpt:
+        "Explore the connection between sustainable agriculture and healthy eating, and how you can make environmentally conscious food choices.",
+      image:
+        "https://images.pexels.com/photos/1327838/pexels-photo-1327838.jpeg",
       author: "Emily Rodriguez",
       date: "January 10, 2025",
       readTime: "6 min read",
-      category: "Sustainability"
+      category: "Sustainability",
     },
     {
       id: 4,
       title: "Creating the Perfect Smoothie Bowl: A Complete Guide",
-      excerpt: "Master the art of smoothie bowl creation with our step-by-step guide to achieving the perfect texture, flavor, and nutritional balance.",
-      image: "https://images.pexels.com/photos/1092730/pexels-photo-1092730.jpeg",
+      excerpt:
+        "Master the art of smoothie bowl creation with our step-by-step guide to achieving the perfect texture, flavor, and nutritional balance.",
+      image:
+        "https://images.pexels.com/photos/1092730/pexels-photo-1092730.jpeg",
       author: "Chef Maria Lopez",
       date: "January 8, 2025",
       readTime: "4 min read",
-      category: "Recipes"
+      category: "Recipes",
     },
     {
       id: 5,
       title: "The Benefits of Plant-Based Proteins for Athletic Performance",
-      excerpt: "Discover how plant-based proteins can fuel your workouts and support muscle recovery just as effectively as traditional sources.",
+      excerpt:
+        "Discover how plant-based proteins can fuel your workouts and support muscle recovery just as effectively as traditional sources.",
       image: "https://images.pexels.com/photos/775032/pexels-photo-775032.jpeg",
       author: "Dr. James Wilson",
       date: "January 5, 2025",
       readTime: "8 min read",
-      category: "Fitness"
+      category: "Fitness",
     },
     {
       id: 6,
       title: "Meal Prep Made Easy: Healthy Eating for Busy Lives",
-      excerpt: "Learn practical strategies for meal prepping that will save you time while ensuring you maintain a nutritious diet throughout the week.",
-      image: "https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg",
+      excerpt:
+        "Learn practical strategies for meal prepping that will save you time while ensuring you maintain a nutritious diet throughout the week.",
+      image:
+        "https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg",
       author: "Lisa Thompson",
       date: "January 3, 2025",
       readTime: "6 min read",
-      category: "Lifestyle"
-    }
+      category: "Lifestyle",
+    },
   ];
 
-  const categories = ["All", "Nutrition", "Health Tips", "Sustainability", "Recipes", "Fitness", "Lifestyle"];
+  const categories = [
+    "All",
+    "Nutrition",
+    "Health Tips",
+    "Sustainability",
+    "Recipes",
+    "Fitness",
+    "Lifestyle",
+  ];
   const [selectedCategory, setSelectedCategory] = React.useState("All");
 
-  const filteredPosts = selectedCategory === "All" 
-    ? blogPosts 
-    : blogPosts.filter(post => post.category === selectedCategory);
+  const filteredPosts =
+    selectedCategory === "All"
+      ? blogPosts
+      : blogPosts.filter((post) => post.category === selectedCategory);
 
   return (
     <motion.div
@@ -91,8 +112,9 @@ const Blog = () => {
               Health & Wellness Blog
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover expert insights, recipes, and tips for living a healthier, 
-              more sustainable lifestyle. Join our community of wellness enthusiasts.
+              Discover expert insights, recipes, and tips for living a
+              healthier, more sustainable lifestyle. Join our community of
+              wellness enthusiasts.
             </p>
           </motion.div>
         </div>
@@ -110,8 +132,8 @@ const Blog = () => {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-4 py-2 rounded-full font-medium transition-all duration-200 ${
                   selectedCategory === category
-                    ? 'bg-green-600 text-white shadow-md'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? "bg-green-600 text-white shadow-md"
+                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                 }`}
               >
                 {category}
@@ -264,8 +286,8 @@ const Blog = () => {
               Stay Updated with Our Newsletter
             </h2>
             <p className="text-xl text-green-100 mb-8">
-              Get the latest health tips, recipes, and wellness insights delivered 
-              straight to your inbox every week.
+              Get the latest health tips, recipes, and wellness insights
+              delivered straight to your inbox every week.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input

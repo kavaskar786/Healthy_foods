@@ -1,11 +1,10 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowDown, Star, Heart, Leaf } from 'lucide-react';
-import Bowl3D from '../components/Bowl3D';
+import { motion } from "framer-motion";
+import { ArrowDown, Star, Heart, Leaf } from "lucide-react";
+import { Bowl3D } from "../../components/ThreeDimensionalArea";
 
 const Home = () => {
   const scrollToFeatures = () => {
-    document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById("features")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -31,8 +30,9 @@ const Home = () => {
                 <span className="text-green-600 block">Body & Soul</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 max-w-lg">
-                Experience the art of healthy eating with our interactive bowl builder. 
-                Watch as premium organic ingredients come together in perfect harmony.
+                Experience the art of healthy eating with our interactive bowl
+                builder. Watch as premium organic ingredients come together in
+                perfect harmony.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <motion.button
@@ -89,8 +89,9 @@ const Home = () => {
               Why Choose NutriBloom?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We believe that healthy eating should be a joyful, interactive experience. 
-              Our carefully sourced ingredients and innovative approach make nutrition exciting.
+              We believe that healthy eating should be a joyful, interactive
+              experience. Our carefully sourced ingredients and innovative
+              approach make nutrition exciting.
             </p>
           </motion.div>
 
@@ -99,18 +100,21 @@ const Home = () => {
               {
                 icon: <Leaf className="h-12 w-12 text-green-600" />,
                 title: "100% Organic",
-                description: "Every ingredient is certified organic, sustainably sourced, and free from harmful chemicals."
+                description:
+                  "Every ingredient is certified organic, sustainably sourced, and free from harmful chemicals.",
               },
               {
                 icon: <Heart className="h-12 w-12 text-red-500" />,
                 title: "Health Focused",
-                description: "Nutritionist-approved combinations that support your wellness journey and boost energy."
+                description:
+                  "Nutritionist-approved combinations that support your wellness journey and boost energy.",
               },
               {
                 icon: <Star className="h-12 w-12 text-yellow-500" />,
                 title: "Premium Quality",
-                description: "We partner with the finest suppliers to bring you ingredients that taste as good as they look."
-              }
+                description:
+                  "We partner with the finest suppliers to bring you ingredients that taste as good as they look.",
+              },
             ].map((feature, index) => (
               <motion.div
                 key={index}
@@ -120,9 +124,7 @@ const Home = () => {
                 transition={{ delay: index * 0.2 }}
                 className="text-center p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-xl transition-all duration-300"
               >
-                <div className="flex justify-center mb-4">
-                  {feature.icon}
-                </div>
+                <div className="flex justify-center mb-4">{feature.icon}</div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">
                   {feature.title}
                 </h3>
@@ -147,7 +149,8 @@ const Home = () => {
               Ready to Transform Your Health?
             </h2>
             <p className="text-xl text-green-100 mb-8">
-              Join thousands of health enthusiasts who've made the switch to better nutrition.
+              Join thousands of health enthusiasts who've made the switch to
+              better nutrition.
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}

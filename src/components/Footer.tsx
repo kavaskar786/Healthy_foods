@@ -1,6 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Leaf, Facebook, Instagram, Twitter, Mail } from 'lucide-react';
+import { Link } from "react-router-dom";
+import { Leaf, Facebook, Instagram, Twitter, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -14,8 +13,8 @@ const Footer = () => {
               <span className="text-2xl font-bold">NutriBloom</span>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
-              Nourishing your body with organic, sustainable ingredients. 
-              Every bowl tells a story of health, wellness, and environmental care.
+              Nourishing your body with organic, sustainable ingredients. Every
+              bowl tells a story of health, wellness, and environmental care.
             </p>
             <div className="flex space-x-4">
               <Facebook className="h-6 w-6 text-gray-400 hover:text-green-500 cursor-pointer transition-colors" />
@@ -29,10 +28,38 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link to="/about" className="text-gray-300 hover:text-green-500 transition-colors">About Us</Link></li>
-              <li><Link to="/products" className="text-gray-300 hover:text-green-500 transition-colors">Our Products</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-green-500 transition-colors">Contact</Link></li>
-              <li><Link to="/blog" className="text-gray-300 hover:text-green-500 transition-colors">Blog</Link></li>
+              <li>
+                <Link
+                  to="/about"
+                  className="text-gray-300 hover:text-green-500 transition-colors"
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/products"
+                  className="text-gray-300 hover:text-green-500 transition-colors"
+                >
+                  Our Products
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  className="text-gray-300 hover:text-green-500 transition-colors"
+                >
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/blog"
+                  className="text-gray-300 hover:text-green-500 transition-colors"
+                >
+                  Blog
+                </Link>
+              </li>
             </ul>
           </div>
 
